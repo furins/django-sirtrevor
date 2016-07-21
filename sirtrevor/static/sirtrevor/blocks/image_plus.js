@@ -16,7 +16,7 @@
     upload_options: {
       html: [
         '<div class="st-block__upload-container">',
-        '<button class="st-upload-btn">Choose a image</button>',
+        '<button class="st-upload-btn">Choose an image</button>',
         '<input type="hidden" class="input_filer_image">',
         '<img class="thumbnail" style="display: none">',
         '<span class="image_description"></span>',
