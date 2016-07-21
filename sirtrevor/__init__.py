@@ -17,6 +17,7 @@ class SirTrevorContent(six.text_type):
 
 custom_blocks_registry = {}
 
+
 def register_block(block, name=None):
     if name is None:
         name = block.name
