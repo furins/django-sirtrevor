@@ -26,7 +26,7 @@
         pastable: true,
 
         paste_options: {
-            html: '<input type="text" placeholder="<iframe>" class="st-block__paste-input st-paste-block">'
+            html: '<input type="text" placeholder="Paste iFrame data here" class="st-block__paste-input st-paste-block">'
         },
 
         onContentPasted: function (event) {
