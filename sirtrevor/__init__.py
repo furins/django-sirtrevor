@@ -2,6 +2,8 @@ import json
 from django.template.loader import render_to_string
 import six
 
+from sirtrevor.blocks import ImageplusBlock, HeadingExtendedBlock, IframeBlock
+
 
 class SirTrevorContent(six.text_type):
     @property
@@ -22,3 +24,8 @@ def register_block(block, name=None):
     if name is None:
         name = block.name
     custom_blocks_registry[name] = block
+
+
+register_block(ImageplusBlock)
+register_block(HeadingExtendedBlock)
+register_block(IframeBlock)

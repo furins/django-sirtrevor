@@ -1,13 +1,13 @@
 import json
 from django import forms
 from django.conf import settings
-from django.core.urlresolvers import reverse
 from django.forms.widgets import Media
 from django.utils.encoding import force_text
 from . import custom_blocks_registry
 
 
 class SirTrevorWidget(forms.Textarea):
+
     def __init__(self, *args, **kwargs):
         if 'attrs' not in kwargs:
             kwargs['attrs'] = {}
@@ -53,6 +53,7 @@ class SirTrevorWidget(forms.Textarea):
 
     class Media:
         js = [
+            'https://code.jquery.com/jquery-2.2.4.min.js',
             'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js',
             'http://cdnjs.cloudflare.com/ajax/libs/eventable/1.0.5/eventable.min.js',
 

@@ -1,6 +1,4 @@
-import json
 from django.db import models
-from django.conf import settings
 from django.utils.six import with_metaclass, text_type
 from django.utils.translation import ugettext_lazy as _
 from . import SirTrevorContent
@@ -25,7 +23,3 @@ class SirTrevorField(with_metaclass(models.SubfieldBase, models.Field)):
 
     def get_db_prep_value(self, value, connection, prepared=False):
         return text_type(value)
-
-if 'south' in settings.INSTALLED_APPS:
-    from south.modelsinspector import add_introspection_rules
-    add_introspection_rules([], ["^sirtrevor\.fields\.SirTrevorField"])

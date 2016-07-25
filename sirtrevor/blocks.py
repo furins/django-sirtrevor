@@ -1,4 +1,4 @@
-from sirtrevor import register_block
+
 
 
 class BaseBlock(object):
@@ -18,3 +18,9 @@ class HeadingExtendedBlock(BaseBlock):
     class Media:
         js = ['sirtrevor/blocks/heading_extended.js']
 
+
+class IframeBlock(BaseBlock):
+    name = 'Iframe'
+
+    class Media:
+        js = ['sirtrevor/blocks/iframe.js']

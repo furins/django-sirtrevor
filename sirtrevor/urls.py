@@ -1,15 +1,16 @@
-from sirtrevor.views import attachment
-
-try:  # pre 1.6
-    from django.conf.urls.defaults import url, patterns
-except ImportError:
-    from django.conf.urls import url, patterns
+from django.conf.urls import url, patterns
+from django.conf import settings
 
 
-urlpatterns = [
-    url(
-        r'^attachments/',
-        attachment,
-        name='sirtrevor_attachments',
-    ),
-]
+urlpatterns = []
+
+if 'Image' in settings.SIRTREVOR_BLOCK_TYPES:
+    from sirtrevor.views import attachment
+
+    urlpatterns = [
+        url(
+            r'^attachments/',
+            attachment,
+            name='sirtrevor_attachments',
+        ),
+    ]

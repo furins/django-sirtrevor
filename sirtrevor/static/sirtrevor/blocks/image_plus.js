@@ -6,7 +6,10 @@
 (function($){
   window.SirTrevor.Blocks.Imageplus = SirTrevor.Blocks.Image.extend({
     type: "Imageplus",
-    title: "Image",
+
+    title: function() {
+      return 'Image';
+    },
 
     toolbarEnabled: true,
     droppable: false,
