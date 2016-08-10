@@ -13,7 +13,8 @@ class SirTrevorConf(AppConf):
         'Video',
         'Tweet',
         'Heading',
-        'iFrame'
+        'iFrame',
+        'Magento'
     ]
 
     DEFAULT_TYPE = None

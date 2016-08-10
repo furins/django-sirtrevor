@@ -24,3 +24,10 @@ class IframeBlock(BaseBlock):
 
     class Media:
         js = ['sirtrevor/blocks/iframe.js']
+
+
+class MagentoBlock(BaseBlock):
+    name = 'Magento'
+
+    class Media:
+        js = ['sirtrevor/blocks/magento.js']
