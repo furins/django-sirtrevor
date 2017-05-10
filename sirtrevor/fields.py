@@ -5,7 +5,7 @@ from . import SirTrevorContent
 from .forms import SirTrevorFormField
 
 
-class SirTrevorField(with_metaclass(models.SubfieldBase, models.Field)):
+class SirTrevorField(models.Field):
     description = _("TODO")
 
     def get_internal_type(self):
