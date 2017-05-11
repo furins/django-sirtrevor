@@ -2,7 +2,11 @@
 
 
 class BaseBlock(object):
-    pass
+    def pre_render(self, blockdata):
+        """
+            Over-ride this method to insert data into your block.
+        """
+        return blockdata
 
 
 class ImageplusBlock(BaseBlock):
