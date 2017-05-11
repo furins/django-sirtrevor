@@ -1,5 +1,4 @@
 import json
-from django.template.loader import render_to_string
 import six
 
 from sirtrevor.blocks import \
@@ -14,15 +13,13 @@ class SirTrevorContent(six.text_type):
         if len(self):
             content = json.loads(self)
             for block in content['data']:
-                template_name = 'sirtrevor/blocks/%s.html' % block['type']
                 try:
                     blocktype = custom_blocks_registry[block['type']]
                 except KeyError:
                     blocktype = BaseBlock
 
-                data = blocktype.pre_render(block['data'])
-
-                html.append(render_to_string(template_name, data))
+                classed = blocktype(block)
+                html.append(classed.render())
         return u''.join(html)
 
 

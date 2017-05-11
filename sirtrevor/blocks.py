@@ -1,12 +1,23 @@
-
-
+from django.template.loader import render_to_string
 
 class BaseBlock(object):
-    def pre_render(self, blockdata):
+    def __init__(self, block):
         """
-            Over-ride this method to insert data into your block.
+            This is run for each block when rendering.
         """
-        return blockdata
+        self.block = block
+        self.template_name = 'sirtrevor/blocks/%s.html' % block['type']
+
+    def render(self):
+        """
+            render this block to HTML
+        """
+        return render_to_string(this.template_name, this.block['data'])
+
+    @staticmethod
+    def on_register():
+        """ called on registration """
+        pass
 
 
 class ImageplusBlock(BaseBlock):
