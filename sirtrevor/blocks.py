@@ -12,7 +12,7 @@ class BaseBlock(object):
         """
             render this block to HTML
         """
-        return render_to_string(this.template_name, this.block['data'])
+        return render_to_string(self.template_name, self.block['data'])
 
     @staticmethod
     def on_register():
