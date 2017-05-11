@@ -2,8 +2,9 @@ import json
 from django.template.loader import render_to_string
 import six
 
-from sirtrevor.blocks import ImageplusBlock, HeadingExtendedBlock, IframeBlock
-from sirtrevor.blocks import MagentoBlock
+from sirtrevor.blocks import \
+    BaseBlock, ImageplusBlock, HeadingExtendedBlock, \
+    IframeBlock, MagentoBlock
 
 
 class SirTrevorContent(six.text_type):
@@ -14,7 +15,13 @@ class SirTrevorContent(six.text_type):
             content = json.loads(self)
             for block in content['data']:
                 template_name = 'sirtrevor/blocks/%s.html' % block['type']
-                data = custom_blocks_registry[block['type']].pre_render(block['data'])
+                try:
+                    blocktype = custom_blocks_registry[block['type']]
+                except KeyError:
+                    blocktype = BaseBlock
+
+                data = blocktype.pre_render(block['data'])
+
                 html.append(render_to_string(template_name, data))
         return u''.join(html)
 
