@@ -26,12 +26,8 @@ class SirTrevorWidget(forms.Textarea):
 
         super(SirTrevorWidget, self).__init__(*args, **kwargs)
 
-    def build_attrs(self, base_attrs, extra_attrs=None, **kwargs):
-        if extra_attrs:
-            extra_attrs.update(kwargs)
-        else:
-            extra_attrs = kwargs.copy()
-        attrs = super(SirTrevorWidget, self).build_attrs(self.attrs, extra_attrs)
+    def build_attrs(self, extra_attrs=None, **kwargs):
+        attrs = super().build_attrs(extra_attrs, **kwargs)
 
         sirtrevor_defaults = {
             'uploadUrl': kwargs.pop(
