@@ -26,11 +26,11 @@ class SirTrevorWidget(forms.Textarea):
 
         super(SirTrevorWidget, self).__init__(*args, **kwargs)
 
-    def build_attrs(self, extra_attrs=None, **kwargs):
-        attrs = super().build_attrs(extra_attrs, **kwargs)
+    def build_attrs(self, base_attrs, extra_attrs=None):
+        attrs = super().build_attrs(base_attrs, extra_attrs)
 
         sirtrevor_defaults = {
-            'uploadUrl': kwargs.pop(
+            'uploadUrl': extra_attrs.pop(
                 'st_upload_url', force_text(settings.SIRTREVOR_UPLOAD_URL)
             ),
         }
