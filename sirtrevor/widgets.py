@@ -54,8 +54,8 @@ class SirTrevorWidget(forms.Textarea):
     class Media:
         js = [
             'https://code.jquery.com/jquery-2.2.4.min.js',
-            'http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js',
-            'http://cdnjs.cloudflare.com/ajax/libs/eventable/1.0.5/eventable.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/eventable/1.0.5/eventable.min.js',
 
             'sirtrevor/components/sir-trevor-js/sir-trevor.js',
             'sirtrevor/init.js',
