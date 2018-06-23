@@ -477,4 +477,8 @@ ul.st-text-block {
 .st-format-btn--Unlink {
   text-decoration: line-through; }
 
+.change-form [data-type="image"] img {
+    max-width: 100%;
+}
+
 /*# sourceMappingURL=sir-trevor.css.map */
