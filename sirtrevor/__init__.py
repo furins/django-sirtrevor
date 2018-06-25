@@ -3,7 +3,7 @@ import six
 
 from sirtrevor.blocks import \
     BaseBlock, ImageplusBlock, HeadingExtendedBlock, \
-    IframeBlock, MagentoBlock
+    IframeBlock, MagentoBlock, ImageBlock
 
 
 class SirTrevorContent(six.text_type):
@@ -33,6 +33,7 @@ def register_block(block, name=None):
 
 
 register_block(ImageplusBlock)
+register_block(ImageBlock)
 register_block(HeadingExtendedBlock)
 register_block(IframeBlock)
 register_block(MagentoBlock)

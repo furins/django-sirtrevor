@@ -1,5 +1,6 @@
 from django.template.loader import render_to_string
 
+
 class BaseBlock(object):
     def __init__(self, block):
         """
@@ -32,6 +33,13 @@ class HeadingExtendedBlock(BaseBlock):
 
     class Media:
         js = ['sirtrevor/blocks/heading_extended.js']
+
+
+class ImageBlock(BaseBlock):
+    name = 'Image'
+
+    class Media:
+        js = ['sirtrevor/blocks/image.js']
 
 
 class IframeBlock(BaseBlock):
