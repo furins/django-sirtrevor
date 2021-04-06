@@ -1,16 +1,14 @@
 from django.conf.urls import url
 from django.conf import settings
-
+from sirtrevor import views
 
 urlpatterns = []
 
 if 'Image' in settings.SIRTREVOR_BLOCK_TYPES:
-    from sirtrevor.views import attachment
-
     urlpatterns = [
         url(
             r'^attachments/',
-            attachment,
+            views.attachment,
             name='sirtrevor_attachments',
         ),
     ]

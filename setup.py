@@ -17,7 +17,9 @@ setup(
     description='A simple Django app that provides a model field and ' +
                 'corresponding widget based on the fantastic Sir Trevor ' +
                 'project',
-    long_description=open('README.rst', 'r').read(),
+    long_description='A simple Django app that provides a model field and ' +
+                'corresponding widget based on the fantastic Sir Trevor ' +
+                'project',
     url='https://github.com/philippbosch/django-sirtrevor/',
     author='Philipp Bosch',
     author_email='hello@pb.io',

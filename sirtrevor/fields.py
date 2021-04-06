@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.six import with_metaclass, text_type
+from six import text_type
 from django.utils.translation import ugettext_lazy as _
 from . import SirTrevorContent
 from .forms import SirTrevorFormField
