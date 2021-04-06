@@ -46,7 +46,7 @@ class SirTrevorWidget(forms.Textarea):
                     css=getattr(block.Media, 'css', {}),
                     js=getattr(block.Media, 'js', [])
                 )
-                media += block_media
+                media = media + block_media
         return media
 
     media = property(_media)
